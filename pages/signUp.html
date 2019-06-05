@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://fonts.googleapis.com/css?family=Raleway"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/signUp.css" />
+    <!--<script src="../js/signUp.js"></script>-->
+</head>
+
+<body>
+<form id="regForm" method="POST">
+    <h1>הרשמה</h1>
+  <center><img src="/photos/ring.png" id="icon" alt="User Icon"></center>  
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">
+        שם
+        <p>
+            <input
+                    placeholder="שם פרטי.."
+                    oninput="this.className = ''"
+                    name="fname"
+                    id="fname"
+            />
+        </p>
+        <div id="errorFname" style="color:red;"></div>
+        <p>
+            <input
+                    placeholder="שם משפחה.."
+                    oninput="this.className = ''"
+                    name="lname"
+                    id="lname"
+            />
+        </p>
+        <div id="errorlname" style="color:red;"></div>
+        פרטי התחברות
+        <p>
+            <input
+                    placeholder="הכנס את האימייל שלך.."
+                    oninput="this.className = ''"
+                    name="email"
+                    id="email"
+            />
+        </p>
+        <div id="errorEmail" style="color:red;"></div>
+        <p>
+            <input
+                    type="password"
+                    placeholder="הכנס סיסמא.."
+                    oninput="this.className = ''"
+                    name="pword"
+                    id="password"
+            />
+        </p>
+        <div id="errorPassword" style="color:red;"></div>
+        בחר אייקון:
+        <p id="iconP">
+            <label><input
+                    type="radio"
+                    name="icon"
+                    id="male"
+                    value="male"
+                   
+                    class="inputI"/><img
+                    class="iconImg"
+                    src="../photos/male.jpg"
+                    width="10%"
+                    /></label>
+            <label><input
+                    type="radio"
+                    name="icon"
+                    id="female"
+                    value="female"
+                    
+                    class="inputI"/><img
+                    class="iconImg"
+                    src="../photos/female.jpg"
+                    width="10%"
+            /></label>
+            <label
+            ><input
+                    type="radio"
+                    name="icon"
+                    id="both"
+                    value="both"
+                   
+                    class="inputI"/><img
+                    class="iconImg"
+                    src="../photos/both.jpg"
+                    width="10%"
+            /></label>
+        </p>
+        <div id="errorIcon" style="color:red;"></div>
+    </div>
+
+    <div class="tab">
+        <h2>בחר את העדפותיך</h2>
+        <h4>עונת האירוע:</h4>
+        <div
+                style="margin-bottom: 5%;
+    display: table;"
+        >
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="win"
+                            name="season"
+                            value="41"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/winter2.jpg" alt="winter" class="season" />
+                </label>
+                <div class="middle"><div class="text">חורף</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="sum"
+                            name="season"
+                            value="44"
+                            alt="summer"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/summer.PNG" class="season" />
+                </label>
+                <div class="middle"><div class="text">קיץ</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="spr"
+                            name="season"
+                            value="43"
+                            alt="spring"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/spring.jpg" class="season" />
+                </label>
+                <div class="middle"><div class="text">אביב</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="aut"
+                            name="season"
+                            value="42"
+                            alt="autumn"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/autumn.jpg" class="season" />
+                </label>
+                <div class="middle"><div class="text">סתיו</div></div>
+            </div>
+        </div>
+        <div id="seasonError"></div>
+    </div>
+    <div class="tab">
+        <h2>בחר את העדפותיך</h2>
+        <h4>סגנון:</h4>
+        <div
+                style="margin-bottom: 5%;
+    display: table;"
+        >
+            <div class="container">
+                <label>
+                    <input
+                            type="checkbox"
+                            id="urban"
+                            value="61"
+                            name="style"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/urban.jpeg" alt="urban" class="season" />
+                </label>
+                <div class="middle"><div class="text">אורבני</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="kibbutz"
+                            value="62"
+                            name="style"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/kibutz.jpg" alt="kibbutz" class="season" />
+                </label>
+                <div class="middle"><div class="text">קיבוצי</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="vintage"
+                            value="63"
+                            name="style"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/vintage.jpg" alt="vintage" class="season" />
+                </label>
+                <div class="middle"><div class="text">וינטאג'</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="classic"
+                            value="64"
+                            name="style"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/classic.jpg" alt="classic" class="season" />
+                </label>
+                <div class="middle"><div class="text">קלאסי</div></div>
+            </div>
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="luxury"
+                            value="65"
+                            name="style"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/luxury.jpg" alt="luxury" class="season" />
+                </label>
+                <div class="middle"><div class="text">יוקרתי</div></div>
+            </div>
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="romantic"
+                            value="66"
+                            name="style"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/romantic.jpg" alt="romantic" class="season" />
+                </label>
+                <div class="middle"><div class="text">רומנטי</div></div>
+            </div>
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="boho"
+                            value="67"
+                            name="style"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/boho.jpg" alt="boho" class="season" />
+                </label>
+                <div class="middle"><div class="text">בוהו</div></div>
+            </div>
+        </div>
+        <div id="styleError"></div>
+    </div>
+    <div class="tab">
+        <h2>בחר את העדפותיך</h2>
+        <h4>אלמנטים נוספים:</h4>
+        <div
+                style="margin-bottom: 5%;
+    display: table;"
+        >
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="pool"
+                            value="31"
+                            name="element"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/pool.jpg" alt="pool" class="season" />
+                </label>
+                <div class="middle"><div class="text">בריכה</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="sea"
+                            value="33"
+                            name="element"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/sea.jpg" alt="sea" class="season" />
+                </label>
+                <div class="middle"><div class="text">ים</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="forest"
+                            value="32"
+                            name="element"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/forest.jpg" alt="forest" class="season" />
+                </label>
+                <div class="middle"><div class="text">יער</div></div>
+            </div>
+
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="builtCanopy"
+                            value="36"
+                            name="element"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img
+                            src="../photos/builtCanopy.jpg"
+                            alt="builtCanopy"
+                            class="season"
+                    />
+                </label>
+                <div class="middle"><div class="text">חופה בנויה</div></div>
+            </div>
+            <div class="container">
+                <label>
+                    <input
+                            type="radio"
+                            id="deck"
+                            value="37"
+                            name="element"
+                            style="border: 0px;"
+                            class="selector"
+                    />
+                    <img src="../photos/deck.jpg" alt="deck" class="season" />
+                </label>
+                <div class="middle"><div class="text">דק</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="tab">
+        <h2>בחר את העדפותיך</h2>
+        <h4>בחר את האיזור המועדף בארץ:</h4>
+        <div id="place">
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="place"
+                        id="hasharon"
+                        value="21"
+                        class="inputR"
+                />איזור השרון</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="place"
+                        id="center"
+                        value="22"
+                        class="inputR"
+                />איזור המרכז</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="place"
+                        id="hashfela"
+                        value="23"
+                        class="inputR"
+                />איזור השפלה</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="place"
+                        id="north"
+                        value="24"
+                        class="inputR"
+                />איזור הצפון</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="place"
+                        id="south"
+                        value="25"
+                        class="inputR"
+                />איזור הדרום</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="place"
+                        id="jerusalem"
+                        value="26"
+                        class="inputR"
+                />איזור ירושלים</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="place"
+                        id="allCountry"
+                        value="27"
+                        class="inputR"
+                />כל הארץ</label
+                >
+            </p>
+        </div>
+        <div id="placeError"></div>
+    </div>
+    <div class="tab">
+        <h2>בחר את העדפותיך</h2>
+        <h4>בחר את התקציב המקסימלי:</h4>
+        <div id="place">
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="budget"
+                        id="250"
+                        value="55"
+                        class="inputR"
+                />250</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="budget"
+                        id="300"
+                        value="54"
+                        class="inputR"
+                />300</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="budget"
+                        id="400"
+                        value="53"
+                        class="inputR"
+                />400</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="budget"
+                        id="500"
+                        value="52"
+                        class="inputR"
+                />500</label
+                >
+            </p>
+            <p>
+                <label
+                ><input
+                        type="radio"
+                        name="budget"
+                        id="600"
+                        value="51"
+                        class="inputR"
+                />600</label
+                >
+            </p>
+        </div>
+        <div id="placeError"></div>
+        <div id="status"></div>
+    </div>
+    <!-- <div style="overflow:auto;">
+       <div style="float:left;">
+           <button type="button" id="prevBtn" onclick="nextPrev(-1)">אחורה</button>
+           <button type="button" id="nextBtn" onclick="nextPrev(1)">הבא</button>
+       </div>
+   </div>-->
+    <!-- Circles which indicates the steps of the form: -->
+    <p style="text-align:center;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </p>
+</form>
+<div style="overflow:auto;">
+    <div style="float:left; margin-left:15%">
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">הבא</button>
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">אחורה</button>
+
+    </div>
+</div>
+<script>
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    var userIcon;
+    var userSeason;
+    var userStyle;
+    var userElement;
+    var userPlace;
+
+    showTab(currentTab); // Display the current tab
+
+    function showTab(n) {
+        // This function will display the specified tab of the form...
+        var x = document.getElementsByClassName("tab");
+        console.log(x);
+        console.log("showtab "+ n);
+        x[n].style.display = "block";
+        //... and fix the Previous/Next buttons:
+        if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+        } else {
+            document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == x.length - 1) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+            document.getElementById("nextBtn").innerHTML = "הבא";
+        }
+        //... and run a function that will display the correct step indicator:
+        fixStepIndicator(n);
+    }
+
+    function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        console.log("nextprev "+ n);
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form...
+        if (currentTab >= x.length) {
+            // ... the form gets submitted:
+
+            //    document.getElementById("regForm").submit();
+            //    return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+    }
+
+    function validateForm() {
+        // This function deals with validation of the form fields
+        var x,
+            y,
+            i,
+            valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[0].getElementsByTagName("input");
+
+        var fname = document.getElementById("fname").value;
+        console.log(fname);
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var f = document.getElementById("female").checked;
+        var m = document.getElementById("male").checked;
+        var b = document.getElementById("both").checked;
+        var winter = document.getElementById("win").checked;
+        var summer = document.getElementById("sum").checked;
+        var spring = document.getElementById("spr").checked;
+        var autumn = document.getElementById("aut").checked;
+        var urban = document.getElementById("urban").checked;
+        var kibbutz = document.getElementById("kibbutz").checked;
+        var vintage = document.getElementById("vintage").checked;
+        var classic = document.getElementById("classic").checked;
+        var luxury = document.getElementById("luxury").checked;
+        var romantic = document.getElementById("romantic").checked;
+        var boho = document.getElementById("boho").checked;
+        var pool = document.getElementById("pool").checked;
+        var sea = document.getElementById("sea").checked;
+        var forest = document.getElementById("forest").checked;
+        var builtCanopy = document.getElementById("builtCanopy").checked;
+        var deck = document.getElementById("deck").checked;
+        var hasharon = document.getElementById("hasharon").checked;
+        var center = document.getElementById("center").checked;
+        var hashfela = document.getElementById("hashfela").checked;
+        var north = document.getElementById("north").checked;
+        var south = document.getElementById("south").checked;
+        var jerusalem = document.getElementById("jerusalem").checked;
+        var allCountry = document.getElementById("allCountry").checked;
+        var two = document.getElementById("250").checked;
+        var three = document.getElementById("300").checked;
+        var four = document.getElementById("400").checked;
+        var five = document.getElementById("500").checked;
+        var six = document.getElementById("600").checked;
+
+        //check valid first tab
+        if (
+                !(password.length >= 2 && password.length <= 50) ||
+                !(fname.length >= 2 && fname.length <= 50) ||
+                !(lname.length >= 2 && lname.length <= 50) ||
+                !email.includes("@") ||
+                (
+                    !(document.getElementById("male").checked) &&
+                    !(document.getElementById("female").checked) &&
+                    !(document.getElementById("both").checked)
+                )
+            ) {
+                if (!(password.length >= 2 && password.length <= 50)) {
+                    text = "The password must be between 2 and 50 characters";
+                    document.getElementById("errorPassword").innerHTML = text;
+                }
+                if (!email.includes("@")) {
+                     text = "This is not a valid email";
+                     document.getElementById("errorEmail").innerHTML = text;
+                   }
+                if (!(fname.length >= 2 && fname.length <= 50)) {
+                    text = "The first name must be between 2 and 50 characters";
+                    document.getElementById("errorFname").innerHTML = text;
+                }
+                if (!(lname.length >= 2 && lname.length <= 50)) {
+                    text = "The last name must be between 2 and 50 characters";
+                    document.getElementById("errorlname").innerHTML = text;
+                }
+                if (
+                    (   !(document.getElementById("male").checked) &&
+                        !(document.getElementById("female").checked) &&
+                        !(document.getElementById("both").checked)
+                     )
+                    ) {
+                    text = "Please select icon";
+                    document.getElementById("errorIcon").innerHTML = text;
+                    }
+    
+              /*  console.log(f);
+                console.log(m);
+                console.log(b);
+                console.log(!(f || m || b));*/
+                /*console.log((y[0].value == "") || ((!(f))&&!(m)&&!(b));*/
+    
+                // A loop that checks every input field in the current tab:
+                for (i = 0; i < y.length; i++) {
+                    // If a field is empty...
+                    
+                    if (y[i].value == ""|| y[i].value.length ==1 || (!f && !m && !b)) {
+                        // add an "invalid" class to the field:
+                        y[i].className += " invalid";
+                        // and set the current valid status to false
+                        valid = false;
+                    }
+                }
+              
+                
+                var email = document.getElementsByName("email");
+                    if (!email.includes("@")) {
+                        email.className += " invalid";
+                    }
+              }
+              if (currentTab == 0) {
+                var icons = document.getElementsByName("icon");
+                console.log(icons[0]);
+                for (var i = 0; i< icons.length; i++) {
+                    if (icons[i].checked) {
+                        userIcon = icons[i].value;
+                        console.log(userIcon);
+                    }
+                }
+              }
+              
+        if (currentTab == 1) {
+            if (!winter && !summer && !spring && !autumn) {
+                text = "Please select Season";
+                document.getElementById("seasonError").innerHTML = text;
+                valid = false;
+            }
+            var seasons = document.getElementsByName("season");
+            for (var i = 0, l = seasons.length; i < l; i++) {
+                if (seasons[i].checked) {
+                    userSeason = seasons[i].value;
+                }
+            }
+        }
+        if (currentTab == 2) {
+            if (
+                !urban &&
+                !kibbutz &&
+                !vintage &&
+                !classic &&
+                !luxury &&
+                !romantic &&
+                !boho
+            ) {
+                text = "Please select Style";
+                document.getElementById("styleError").innerHTML = text;
+                valid = false;
+            }
+            var styles = document.getElementsByName("style");
+            for (var i = 0, l = styles.length; i < l; i++) {
+                if (styles[i].checked) {
+                    userStyle = styles[i].value;
+                }
+            }
+        } else if (currentTab == 3) {
+            if (!pool && !sea && !forest && !builtCanopy && !deck) {
+                text = "Please select Elements";
+                document.getElementById("elementError").innerHTML = text;
+                valid = false;
+            }
+            var elements = document.getElementsByName("element");
+            for (var i = 0, l = elements.length; i < l; i++) {
+                if (elements[i].checked) {
+                    userElement = elements[i].value;
+                }
+            }
+            console.log(userElement);
+        } else if (currentTab == 4) {
+            if (
+                !hasharon &&
+                !center &&
+                !hashfela &&
+                !north &&
+                !south &&
+                !jerusalem &&
+                !allCountry
+            ) {
+                text = "Please select Place";
+                document.getElementById("placeError").innerHTML = text;
+                valid = false;
+            }
+            var places = document.getElementsByName("place");
+            for (var i = 0, l = places.length; i < l; i++) {
+                if (places[i].checked) {
+                    userPlace = places[i].value;
+                }
+            }
+            console.log(userPlace);
+        } else if (currentTab == 5) {
+            if (!two && !three && !four && !five && !six) {
+                text = "Please select Price";
+                document.getElementById("priceError").innerHTML = text;
+                valid = false;
+            }
+            var budgets = document.getElementsByName("budget");
+            for (var i = 0, l = budgets.length; i < l; i++) {
+                if (budgets[i].checked) {
+                    var userBudget = budgets[i].value;
+                }
+            }
+            console.log(userBudget);
+            console.log("Bar");
+            var hr = new XMLHttpRequest();
+            var url = "connection.php";
+            console.log(fname);
+            console.log(lname);
+            console.log(email);
+            console.log(password);
+            console.log(userIcon);
+            console.log(userSeason);
+            console.log(userStyle);
+            console.log(userPlace);
+            console.log(userBudget);
+
+            var vars =
+                "fname=" +
+                fname +
+                "&lname=" +
+                lname +
+                "&email=" +
+                email +
+                "&password=" +
+                password +
+                "&icon=" +
+                userIcon +
+                "&season=" +
+                userSeason +
+                "&style=" +
+                userStyle +
+                "&element=" +
+                userElement +
+                "&place=" +
+                userPlace +
+                "&budget=" +
+                userBudget;
+            hr.open("POST", url, true);
+            hr.setRequestHeader(
+                "Content-type",
+                "application/x-www-form-urlencoded"
+            );
+            hr.onreadystatechange = function() {
+                if (hr.readyState == 4 && hr.status == 200) {
+                    var return_data = hr.responseText;
+                    console.log(return_data);
+                    window.location.href = '../index.php';
+                    /*document.getElementById("status").innerHTML=return_data;*/
+                }
+            };
+            hr.send(vars);
+            /*  location.reload();*/
+        }
+
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+            document.getElementsByClassName("step")[currentTab].className +=
+                " finish";
+        }
+        return valid; // return the valid status
+    }
+
+    function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i,
+            x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class on the current step:
+        x[n].className += " active";
+    }
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: "637281690063529",
+            cookie: true,
+            xfbml: true,
+            version: "v3.2"
+        });
+
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    };
+
+    (function(d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+
+    function statusChangeCallback(response) {
+        if (response.status == "connected") {
+            console.log("Log in");
+            setElements(true);
+            testAPI();
+        } else {
+            console.log("Not Log in");
+            setElements(false);
+        }
+    }
+
+    function testAPI() {
+        FB.api("/me?fields=name,email", function(response) {
+            if (response && !response.error) {
+                //console.log(response);
+                buildProfile(response);
+            }
+        });
+    }
+
+    function buildProfile(user) {
+        let profile = `
+                <h3>${user.name}</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" >User ID:${user.id}</li>
+                    <li class="list-group-item" >Email:${user.email}</li>
+                </ul>
+                `;
+        document.getElementById("profile").innerHTML = profile;
+    }
+
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
+    function setElements(isLoggedIn) {
+        if (isLoggedIn) {
+            document.getElementById("logout").style.display = "block";
+            document.getElementById("profile").style.display = "block";
+            document.getElementById("fb-btn").style.display = "none";
+            document.getElementById("heading").style.display = "none";
+        } else {
+            document.getElementById("logout").style.display = "none";
+            document.getElementById("profile").style.display = "none";
+            document.getElementById("fb-btn").style.display = "block";
+            document.getElementById("heading").style.display = "block";
+        }
+    }
+
+    function logout() {
+        FB.logout(function(response) {
+            setElements(false);
+        });
+    }
+</script>
+</body>
+</html>

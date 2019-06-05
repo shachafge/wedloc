@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin:0px auto;
+    font-family: 'Rubik', sans-serif;
+}
+[class*="col-"] {
+  border: 1px solid black;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+header{
+	height:10%;
+}
+
+body{
+	height:1300px;
+}
+
+main{
+	height:90%;
+}
+#upPhoto{
+	height: 45%;
+}
+#aboutP{
+    height: 22.5%;
+    float:left;
+
+}
+
+#overlay{
+    text-align: center;
+    height:80%;
+    right: 10%;
+    left: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+   position: absolute;
+  top: 15%;
+  font-size: 25px;
+  color: black;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+}
+
+#overlayText{
+    text-align: center;
+    height:80%;
+    right: 10%;
+    left: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+   position: absolute;
+  top: 15%;
+  font-size: 25px;
+  color: black;
+  background: url("https://images.pexels.com/photos/1352751/pexels-photo-1352751.jpeg?cs=srgb&dl=cahaya-desain-interior-dinding-1352751.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+aside{
+    height: 22.5%;
+    float:left;
+}
+#photosP{
+    height: 45%;
+    float: left;
+}
+
+footer{
+	height:10%;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+    margin-top:40px;
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: black;
+}
+
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
